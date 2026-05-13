@@ -1,337 +1,313 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta
-      name="description"
-      content="Pedro Barrante Vázquez Resume - Software Developer & Systems Technician"
-    />
-    <meta name="author" content="Pedro Barrante Vázquez" />
-    <title>Resume - Pedro Barrante Vázquez</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-    <link href="css/styles.css" rel="stylesheet" />
-  </head>
-  <body class="d-flex flex-column h-100 bg-light">
-    <main class="flex-shrink-0">
-      <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-        <div class="container px-5">
-          <a class="navbar-brand" href="index.html"
-            ><span class="fw-bolder text-primary"
-              >Pedro Barrante Vázquez</span
-            ></a
-          >
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="resume.html">Resume</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="projects.html">Professional Goals</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../resume.html">Spanish Version</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="Pedro Barrante Vázquez Resume - Software Developer &amp; Systems Technician" />
+  <meta name="author" content="Pedro Barrante Vázquez" />
+  <title>Resume - Pedro Barrante Vázquez</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            primary: {
+              50: '#eef0ff', 100: '#dce2ff', 200: '#b9c5ff', 300: '#97a8ff',
+              400: '#748bff', 500: '#1e30f3', 600: '#1826c2', 700: '#121d92',
+              800: '#0c1361', 900: '#060a31',
+            },
+            accent: {
+              50: '#fde8f2', 100: '#fbd1e6', 200: '#f7a3cc', 300: '#f375b3',
+              400: '#ef4799', 500: '#e21e80', 600: '#b51866', 700: '#88124d',
+              800: '#5a0c33', 900: '#2d061a',
+            },
+          },
+          animation: {
+            'slide-up': 'slideUp 0.6s ease-out forwards',
+          },
+          keyframes: {
+            slideUp: {
+              '0%': { opacity: '0', transform: 'translateY(30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+                  transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal-visible {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+    .text-gradient {
+      background: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    .dark .glass {
+      background: rgba(17, 24, 39, 0.8);
+      border-bottom-color: rgba(255, 255, 255, 0.08);
+    }
+  </style>
+  <!-- FOUC prevention: apply dark mode before paint -->
+  <script>
+    (function() {
+      var stored = localStorage.getItem('pbv-theme');
+      if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+</head>
+<body class="min-h-screen flex flex-col bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 transition-colors duration-300">
 
-      <div class="container px-5 my-5">
-        <div class="text-center mb-5">
-          <h1 class="display-5 fw-bolder mb-0">
-            <span class="text-gradient d-inline">Resume</span>
+  <!-- ═══════════ NAVIGATION ═══════════ -->
+  <nav class="glass sticky top-0 z-50" role="navigation" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="text-2xl font-black tracking-tight text-gradient" aria-label="Home">
+          PBV<span class="text-gray-400 dark:text-gray-500 text-lg font-light">.</span>
+        </a>
+        <div class="hidden lg:flex items-center gap-1">
+          <a href="index.html" class="px-3 py-2 rounded-xl text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Home</a>
+          <a href="resume.html" class="px-3 py-2 rounded-xl text-sm font-semibold text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/30 transition-colors" aria-current="page">Resume</a>
+          <a href="projects.html" class="px-3 py-2 rounded-xl text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Goals</a>
+        </div>
+        <div class="hidden lg:flex items-center gap-3">
+          <button onclick="toggleDarkMode()" class="p-2 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="Toggle dark mode">
+            <i class="bi bi-moon-stars text-lg dark:hidden"></i>
+            <i class="bi bi-sun text-lg hidden dark:inline"></i>
+          </button>
+          <a href="../resume.html" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold border border-gray-200 dark:border-gray-700 text-gray-500 dark:text-gray-400 hover:border-primary-400 dark:hover:border-primary-500 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
+            <i class="bi bi-translate"></i> Español
+          </a>
+        </div>
+        <div class="flex lg:hidden items-center gap-2">
+          <button onclick="toggleDarkMode()" class="p-2 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="Toggle dark mode">
+            <i class="bi bi-moon-stars dark:hidden"></i>
+            <i class="bi bi-sun hidden dark:inline"></i>
+          </button>
+          <button id="mobile-menu-btn" class="p-2 rounded-xl text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+            <i class="bi bi-list text-2xl"></i>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden flex-col lg:hidden pb-4 gap-1" role="navigation" aria-label="Mobile navigation">
+        <a href="index.html" class="px-3 py-2.5 rounded-xl text-sm font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Home</a>
+        <a href="resume.html" class="px-3 py-2.5 rounded-xl text-sm font-semibold text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/30" aria-current="page">Resume</a>
+        <a href="projects.html" class="px-3 py-2.5 rounded-xl text-sm font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Goals</a>
+        <hr class="my-1 border-gray-200 dark:border-gray-800" />
+        <a href="../resume.html" class="inline-flex items-center gap-1.5 px-3 py-2.5 rounded-xl text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+          <i class="bi bi-translate"></i> Spanish Version
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="flex-1">
+    <!-- ═══════════ PAGE HEADER ═══════════ -->
+    <section class="py-14 lg:py-20" aria-labelledby="resume-heading">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center reveal mb-14">
+          <span class="inline-block px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase text-white bg-gradient-to-r from-primary-500 to-accent-500 mb-5 shadow-lg shadow-primary-500/25">
+            Career
+          </span>
+          <h1 id="resume-heading" class="text-4xl sm:text-5xl lg:text-6xl font-black mb-4">
+            <span class="text-gradient">Resume</span>
           </h1>
         </div>
-        <div class="row gx-5 justify-content-center">
-          <div class="col-lg-11 col-xl-9 col-xxl-8">
-            <section>
-              <div
-                class="d-flex align-items-center justify-content-between mb-4"
-              >
-                <h2 class="text-primary fw-bolder mb-0">Experience</h2>
-              </div>
 
-              <div class="card shadow border-0 rounded-4 mb-5">
-                <div class="card-body p-5">
-                  <div class="row align-items-center gx-5">
-                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                      <div class="bg-light p-4 rounded-4">
-                        <div class="text-primary fw-bolder mb-2">
-                          Mar 2025 - Jun 2025
-                        </div>
-                        <div class="small fw-bolder">
-                          Junior Unity Developer
-                        </div>
-                        <div class="small text-muted">MEDAC Foundation</div>
-                        <div class="small text-muted">Remote</div>
-                      </div>
-                    </div>
-                    <div class="col-lg-8">
-                      <div>
-                        Developed an
-                        <strong>interactive 3D simulator</strong> using the
-                        Unity engine. Programmed business logic and mechanics in
-                        <strong>C#</strong>, working within a team under agile
-                        methodologies and managing version control through
-                        <strong>PlasticSCM</strong>.
-                      </div>
-                    </div>
+        <!-- ═══════ EXPERIENCE ═══════ -->
+        <section aria-labelledby="exp-heading" class="mb-14">
+          <h2 id="exp-heading" class="text-2xl sm:text-3xl font-bold text-primary-600 dark:text-primary-400 mb-8 flex items-center gap-3 reveal">
+            <span class="w-10 h-10 rounded-xl bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-600 dark:text-primary-400"><i class="bi bi-briefcase"></i></span>
+            Experience
+          </h2>
+
+          <div class="space-y-6">
+            <!-- Exp 1 -->
+            <div class="reveal rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow">
+              <div class="flex flex-col sm:flex-row gap-5">
+                <div class="sm:w-56 shrink-0">
+                  <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-4 text-center sm:text-left">
+                    <div class="text-primary-600 dark:text-primary-400 font-bold text-sm mb-1">Mar 2025 - Jun 2025</div>
+                    <div class="font-semibold text-gray-800 dark:text-gray-100 text-sm">Junior Unity Developer</div>
+                    <div class="text-gray-400 dark:text-gray-500 text-xs mt-1">Fundación MEDAC</div>
+                    <div class="text-gray-400 dark:text-gray-500 text-xs">Remote</div>
                   </div>
                 </div>
-              </div>
-              <div class="card shadow border-0 rounded-4 mb-5">
-                <div class="card-body p-5">
-                  <div class="row align-items-center gx-5">
-                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                      <div class="bg-light p-4 rounded-4">
-                        <div class="text-primary fw-bolder mb-2">2022</div>
-                        <div class="small fw-bolder">
-                          Support Technician (Internship)
-                        </div>
-                        <div class="small text-muted">DIGI ALCOSA</div>
-                        <div class="small text-muted">Seville, Spain</div>
-                      </div>
-                    </div>
-                    <div class="col-lg-8">
-                      <div>
-                        Hardware repair and advanced configuration of operating
-                        systems. Resolution of technical incidents and driver
-                        updates in end-user environments.
-                      </div>
-                    </div>
-                  </div>
+                <div class="flex-1 text-gray-500 dark:text-gray-400 leading-relaxed text-sm sm:text-base">
+                  Development of an <strong class="text-gray-700 dark:text-gray-200">interactive 3D simulator</strong> using the Unity engine. Programming of business logic and mechanics in <strong class="text-gray-700 dark:text-gray-200">C#</strong>, working under agile team methodologies and managing version control with <strong class="text-gray-700 dark:text-gray-200">PlasticSCM</strong>.
                 </div>
               </div>
-            </section>
+            </div>
 
-            <section>
-              <h2 class="text-secondary fw-bolder mb-4">Education</h2>
-
-              <div class="card shadow border-0 rounded-4 mb-5">
-                <div class="card-body p-5">
-                  <div class="row align-items-center gx-5">
-                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                      <div class="bg-light p-4 rounded-4">
-                        <div class="text-secondary fw-bolder mb-2">
-                          2023 - 2025
-                        </div>
-                        <div class="small fw-bolder">
-                          Higher Technical Degree in Multi-platform Applications
-                          Development
-                        </div>
-                        <div class="small text-muted">MEDAC Sevilla Este</div>
-                      </div>
-                    </div>
-                    <div class="col-lg-8">
-                      <div>
-                        Specialization in backend development with Java,
-                        relational database management (SQL), and markup
-                        languages (XML/HTML). Android mobile application
-                        development and ERP environment management.
-                      </div>
-                    </div>
+            <!-- Exp 2 -->
+            <div class="reveal rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow">
+              <div class="flex flex-col sm:flex-row gap-5">
+                <div class="sm:w-56 shrink-0">
+                  <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-4 text-center sm:text-left">
+                    <div class="text-primary-600 dark:text-primary-400 font-bold text-sm mb-1">2022</div>
+                    <div class="font-semibold text-gray-800 dark:text-gray-100 text-sm">Support Technician (Internship)</div>
+                    <div class="text-gray-400 dark:text-gray-500 text-xs mt-1">DIGI ALCOSA</div>
+                    <div class="text-gray-400 dark:text-gray-500 text-xs">Seville</div>
                   </div>
                 </div>
-              </div>
-
-              <div class="card shadow border-0 rounded-4 mb-5">
-                <div class="card-body p-5">
-                  <div class="row align-items-center gx-5">
-                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                      <div class="bg-light p-4 rounded-4">
-                        <div class="text-secondary fw-bolder mb-2">
-                          2019 - 2022
-                        </div>
-                        <div class="small fw-bolder">
-                          Technician in Microcomputer Systems and Networks
-                        </div>
-                        <div class="small text-muted">
-                          IES Ramón del Valle Inclán
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-8">
-                      <div>
-                        Solid technical training in equipment assembly, local
-                        network administration, and hardware/software support.
-                        The fundamental basis of my technical career.
-                      </div>
-                    </div>
-                  </div>
+                <div class="flex-1 text-gray-500 dark:text-gray-400 leading-relaxed text-sm sm:text-base">
+                  Hardware repair and advanced operating system configuration. Technical incident resolution and driver updates in end-client environments.
                 </div>
               </div>
-            </section>
-
-            <div class="pb-5"></div>
-
-            <section>
-              <div class="card shadow border-0 rounded-4 mb-5">
-                <div class="card-body p-5">
-                  <div class="mb-5">
-                    <div class="d-flex align-items-center mb-4">
-                      <div
-                        class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"
-                      >
-                        <i class="bi bi-tools"></i>
-                      </div>
-                      <h3 class="fw-bolder mb-0">
-                        <span class="text-gradient d-inline"
-                          >Professional Skills</span
-                        >
-                      </h3>
-                    </div>
-                    <div class="row row-cols-1 row-cols-md-3 mb-4 g-3">
-                      <div class="col">
-                        <div
-                          class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
-                        >
-                          3D Simulator Development
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div
-                          class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
-                        >
-                          Version Control (PlasticSCM/Git)
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div
-                          class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
-                        >
-                          Teamwork (Agile Methodologies)
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row row-cols-1 row-cols-md-3 g-3">
-                      <div class="col">
-                        <div
-                          class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
-                        >
-                          Windows Systems Administration
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div
-                          class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
-                        >
-                          Hardware Assembly & Repair
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div
-                          class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
-                        >
-                          Intermediate English
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mb-0">
-                    <div class="d-flex align-items-center mb-4">
-                      <div
-                        class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"
-                      >
-                        <i class="bi bi-code-slash"></i>
-                      </div>
-                      <h3 class="fw-bolder mb-0">
-                        <span class="text-gradient d-inline"
-                          >Languages & Technologies</span
-                        >
-                      </h3>
-                    </div>
-                    <div class="row row-cols-1 row-cols-md-3 mb-4 g-3">
-                      <div class="col">
-                        <div
-                          class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
-                        >
-                          C# (Unity)
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div
-                          class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
-                        >
-                          Java
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div
-                          class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
-                        >
-                          SQL
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row row-cols-1 row-cols-md-3 g-3">
-                      <div class="col">
-                        <div
-                          class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
-                        >
-                          HTML / CSS / JavaScript
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div
-                          class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
-                        >
-                          Python
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div
-                          class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
-                        >
-                          XML
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
+            </div>
           </div>
-        </div>
-      </div>
-    </main>
+        </section>
 
-    <footer class="bg-white py-4 mt-auto">
-      <div class="container px-5 text-center">
-        <div class="small m-0 text-muted">
-          Copyright &copy; Pedro Barrante Vázquez 2026
-        </div>
-      </div>
-    </footer>
+        <!-- ═══════ EDUCATION ═══════ -->
+        <section aria-labelledby="edu-heading" class="mb-14">
+          <h2 id="edu-heading" class="text-2xl sm:text-3xl font-bold text-accent-500 dark:text-accent-400 mb-8 flex items-center gap-3 reveal">
+            <span class="w-10 h-10 rounded-xl bg-accent-50 dark:bg-accent-900/20 flex items-center justify-center text-accent-500 dark:text-accent-400"><i class="bi bi-mortarboard"></i></span>
+            Education
+          </h2>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/scripts.js"></script>
-  </body>
+          <div class="space-y-6">
+            <!-- Edu 1 -->
+            <div class="reveal rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow">
+              <div class="flex flex-col sm:flex-row gap-5">
+                <div class="sm:w-56 shrink-0">
+                  <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-4 text-center sm:text-left">
+                    <div class="text-accent-500 dark:text-accent-400 font-bold text-sm mb-1">2023 - 2025</div>
+                    <div class="font-semibold text-gray-800 dark:text-gray-100 text-sm">Advanced Degree DAM</div>
+                    <div class="text-gray-400 dark:text-gray-500 text-xs mt-1">MEDAC Sevilla Este</div>
+                  </div>
+                </div>
+                <div class="flex-1 text-gray-500 dark:text-gray-400 leading-relaxed text-sm sm:text-base">
+                  Specialization in backend development with <strong class="text-gray-700 dark:text-gray-200">Java</strong>, relational database management (<strong class="text-gray-700 dark:text-gray-200">SQL</strong>), and markup languages (<strong class="text-gray-700 dark:text-gray-200">XML/HTML</strong>). Android mobile application development and ERP environment management.
+                </div>
+              </div>
+            </div>
+
+            <!-- Edu 2 -->
+            <div class="reveal rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow">
+              <div class="flex flex-col sm:flex-row gap-5">
+                <div class="sm:w-56 shrink-0">
+                  <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-4 text-center sm:text-left">
+                    <div class="text-accent-500 dark:text-accent-400 font-bold text-sm mb-1">2019 - 2022</div>
+                    <div class="font-semibold text-gray-800 dark:text-gray-100 text-sm">Intermediate Degree SMR</div>
+                    <div class="text-gray-400 dark:text-gray-500 text-xs mt-1">IES Ramón del Valle Inclán</div>
+                  </div>
+                </div>
+                <div class="flex-1 text-gray-500 dark:text-gray-400 leading-relaxed text-sm sm:text-base">
+                  Solid technical training in equipment assembly, local network administration, and hardware/software support. Fundamental basis of my technical career.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ═══════ SKILLS & TECH ═══════ -->
+        <section aria-labelledby="skills-heading">
+          <div class="reveal rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 p-6 sm:p-8 shadow-sm">
+            <!-- Professional Skills -->
+            <div class="mb-10">
+              <div class="flex items-center gap-3 mb-6">
+                <span class="w-10 h-10 rounded-xl bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-600 dark:text-primary-400">
+                  <i class="bi bi-tools"></i>
+                </span>
+                <h3 id="skills-heading" class="text-xl sm:text-2xl font-bold">
+                  <span class="text-gradient">Professional Skills</span>
+                </h3>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                <div class="flex items-center gap-3 bg-gray-50 dark:bg-gray-800 rounded-xl p-4 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-600 dark:hover:text-primary-400 transition-colors cursor-default">
+                  <i class="bi bi-controller text-primary-500"></i> 3D Simulator Development
+                </div>
+                <div class="flex items-center gap-3 bg-gray-50 dark:bg-gray-800 rounded-xl p-4 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-600 dark:hover:text-primary-400 transition-colors cursor-default">
+                  <i class="bi bi-git text-primary-500"></i> Version Control (PlasticSCM/Git)
+                </div>
+                <div class="flex items-center gap-3 bg-gray-50 dark:bg-gray-800 rounded-xl p-4 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-600 dark:hover:text-primary-400 transition-colors cursor-default">
+                  <i class="bi bi-people text-primary-500"></i> Teamwork (Agile)
+                </div>
+                <div class="flex items-center gap-3 bg-gray-50 dark:bg-gray-800 rounded-xl p-4 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-600 dark:hover:text-primary-400 transition-colors cursor-default">
+                  <i class="bi bi-windows text-primary-500"></i> Windows Systems Administration
+                </div>
+                <div class="flex items-center gap-3 bg-gray-50 dark:bg-gray-800 rounded-xl p-4 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-600 dark:hover:text-primary-400 transition-colors cursor-default">
+                  <i class="bi bi-cpu text-primary-500"></i> Equipment Assembly &amp; Repair
+                </div>
+                <div class="flex items-center gap-3 bg-gray-50 dark:bg-gray-800 rounded-xl p-4 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-600 dark:hover:text-primary-400 transition-colors cursor-default">
+                  <i class="bi bi-translate text-primary-500"></i> English Intermediate Level
+                </div>
+              </div>
+            </div>
+
+            <!-- Languages & Tech -->
+            <div>
+              <div class="flex items-center gap-3 mb-6">
+                <span class="w-10 h-10 rounded-xl bg-accent-50 dark:bg-accent-900/20 flex items-center justify-center text-accent-500 dark:text-accent-400">
+                  <i class="bi bi-code-slash"></i>
+                </span>
+                <h3 class="text-xl sm:text-2xl font-bold">
+                  <span class="text-gradient">Languages &amp; Technologies</span>
+                </h3>
+              </div>
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                <div class="flex items-center gap-3 bg-gray-50 dark:bg-gray-800 rounded-xl p-4 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-accent-50 dark:hover:bg-accent-900/20 hover:text-accent-600 dark:hover:text-accent-400 transition-colors cursor-default">
+                  <i class="bi bi-braces text-accent-500"></i> C# (Unity)
+                </div>
+                <div class="flex items-center gap-3 bg-gray-50 dark:bg-gray-800 rounded-xl p-4 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-accent-50 dark:hover:bg-accent-900/20 hover:text-accent-600 dark:hover:text-accent-400 transition-colors cursor-default">
+                  <i class="bi bi-cup-hot text-accent-500"></i> Java
+                </div>
+                <div class="flex items-center gap-3 bg-gray-50 dark:bg-gray-800 rounded-xl p-4 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-accent-50 dark:hover:bg-accent-900/20 hover:text-accent-600 dark:hover:text-accent-400 transition-colors cursor-default">
+                  <i class="bi bi-database text-accent-500"></i> SQL
+                </div>
+                <div class="flex items-center gap-3 bg-gray-50 dark:bg-gray-800 rounded-xl p-4 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-accent-50 dark:hover:bg-accent-900/20 hover:text-accent-600 dark:hover:text-accent-400 transition-colors cursor-default">
+                  <i class="bi bi-globe text-accent-500"></i> HTML / CSS / JavaScript
+                </div>
+                <div class="flex items-center gap-3 bg-gray-50 dark:bg-gray-800 rounded-xl p-4 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-accent-50 dark:hover:bg-accent-900/20 hover:text-accent-600 dark:hover:text-accent-400 transition-colors cursor-default">
+                  <i class="bi bi-filetype-py text-accent-500"></i> Python
+                </div>
+                <div class="flex items-center gap-3 bg-gray-50 dark:bg-gray-800 rounded-xl p-4 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-accent-50 dark:hover:bg-accent-900/20 hover:text-accent-600 dark:hover:text-accent-400 transition-colors cursor-default">
+                  <i class="bi bi-file-code text-accent-500"></i> XML
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="mt-auto border-t border-gray-200 dark:border-gray-800 bg-white/50 dark:bg-gray-950/50 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <div class="text-center text-sm text-gray-400 dark:text-gray-500">
+        <p>Copyright &copy; Pedro Barrante Vázquez 2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
 </html>
