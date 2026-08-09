@@ -1,316 +1,198 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <title>Pedro Barrante Vázquez | Software Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pedro Barrante Vázquez | Técnico Informático — Desarrollo y Soporte Técnico</title>
+  <meta name="description" content="Técnico informático especializado en sistemas y redes (SMR) con formación superior en desarrollo de aplicaciones multiplataforma (DAM). Experiencia en soporte de sistemas Windows, desarrollo de software y documentación técnica. Sevilla, España." />
+  <meta name="keywords" content="Pedro Barrante Vázquez, Técnico Informático, Desarrollo de Aplicaciones Multiplataforma, DAM, Sistemas Microinformáticos y Redes, SMR, Java, C#, SQL, Unity, Windows, Sevilla, GitHub Pages" />
+  <meta name="author" content="Pedro Barrante Vázquez" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://lostsleepy.github.io/pagina-web-cv/" />
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Pedro Barrante Vázquez — Currículum" />
+  <meta property="og:title" content="Pedro Barrante Vázquez | Técnico Informático" />
+  <meta property="og:description" content="Técnico informático — sistemas, redes y desarrollo de aplicaciones multiplataforma. Sevilla, España." />
+  <meta property="og:url" content="https://lostsleepy.github.io/pagina-web-cv/" />
+  <meta property="og:image" content="https://lostsleepy.github.io/pagina-web-cv/assets/profile.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pedro Barrante Vázquez | Técnico Informático" />
+  <meta name="twitter:description" content="Técnico informático — sistemas, redes y desarrollo de aplicaciones multiplataforma. Sevilla, España." />
+  <meta name="twitter:image" content="https://lostsleepy.github.io/pagina-web-cv/assets/profile.png" />
+
+  <!-- Structured data: Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Pedro Barrante Vázquez",
+    "jobTitle": "Técnico Informático | Desarrollo y Soporte Técnico",
+    "url": "https://lostsleepy.github.io/pagina-web-cv/",
+    "email": "mailto:pedrobarrantevazquez@gmail.com",
+    "sameAs": [
+      "https://github.com/LostSleepy",
+      "https://www.linkedin.com/in/pedrobarrantevazquez/"
+    ],
+    "description": "Técnico informático especializado en Sistemas Microinformáticos y Redes (SMR), con formación superior en Desarrollo de Aplicaciones Multiplataforma (DAM).",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Sevilla",
+      "addressCountry": "ES"
+    },
+    "knowsAbout": [
+      "Administración de Windows", "Java", "C#", "SQL", "HTML", "CSS",
+      "JavaScript", "XML", "Unity", "Git", "GitHub Pages"
+    ]
+  }
+  </script>
+
+  <!-- Tipografía: Figtree (UI) + JetBrains Mono (técnico) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-          },
-          colors: {
-            primary: {
-              50: '#eef0ff',
-              100: '#dce2ff',
-              200: '#b9c5ff',
-              300: '#97a8ff',
-              400: '#748bff',
-              500: '#1e30f3',
-              600: '#1826c2',
-              700: '#121d92',
-              800: '#0c1361',
-              900: '#060a31',
-            },
-            accent: {
-              50: '#fde8f2',
-              100: '#fbd1e6',
-              200: '#f7a3cc',
-              300: '#f375b3',
-              400: '#ef4799',
-              500: '#e21e80',
-              600: '#b51866',
-              700: '#88124d',
-              800: '#5a0c33',
-              900: '#2d061a',
-            },
-          },
-          animation: {
-            'fade-in': 'fadeIn 0.6s ease-out forwards',
-            'slide-up': 'slideUp 0.6s ease-out forwards',
-            'slide-right': 'slideRight 0.6s ease-out forwards',
-            'zoom-in': 'zoomIn 0.6s ease-out forwards',
-            'float': 'float 3s ease-in-out infinite',
-            'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
-          },
-          keyframes: {
-            fadeIn: {
-              '0%': { opacity: '0' },
-              '100%': { opacity: '1' },
-            },
-            slideUp: {
-              '0%': { opacity: '0', transform: 'translateY(30px)' },
-              '100%': { opacity: '1', transform: 'translateY(0)' },
-            },
-            slideRight: {
-              '0%': { opacity: '0', transform: 'translateX(-30px)' },
-              '100%': { opacity: '1', transform: 'translateX(0)' },
-            },
-            zoomIn: {
-              '0%': { opacity: '0', transform: 'scale(0.9)' },
-              '100%': { opacity: '1', transform: 'scale(1)' },
-            },
-            float: {
-              '0%, 100%': { transform: 'translateY(0)' },
-              '50%': { transform: 'translateY(-10px)' },
-            },
-            pulseGlow: {
-              '0%, 100%': { boxShadow: '0 0 20px rgba(30,48,243,0.3)' },
-              '50%': { boxShadow: '0 0 40px rgba(30,48,243,0.6)' },
-            },
-          },
-        },
-      },
-    }
-  </script>
-  <style>
-    /* ─── Scroll Reveal ─── */
-    .reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-                  transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-    .reveal.reveal-right {
-      transform: translateX(-40px);
-    }
-    .reveal.reveal-zoom {
-      transform: scale(0.92);
-    }
-    .reveal-visible {
-      opacity: 1 !important;
-      transform: translateY(0) !important;
-    }
-    .reveal-visible.reveal-right {
-      transform: translateX(0) !important;
-    }
-    .reveal-visible.reveal-zoom {
-      transform: scale(1) !important;
-    }
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
-    /* ─── Gradient Text ─── */
-    .text-gradient {
-      background: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    /* ─── Glassmorphism ─── */
-    .glass {
-      background: rgba(255, 255, 255, 0.75);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-    }
-    .dark .glass {
-      background: rgba(17, 24, 39, 0.8);
-      border-color: rgba(255, 255, 255, 0.08);
-    }
-
-    .glass-card {
-      background: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.5);
-    }
-    .dark .glass-card {
-      background: rgba(30, 41, 59, 0.7);
-      border-color: rgba(255, 255, 255, 0.06);
-    }
-
-    /* ─── Profile Image Float ─── */
-    .profile-wrapper {
-      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-    .profile-wrapper:hover {
-      transform: translateY(-12px);
-    }
-
-    /* ─── Typed Cursor ─── */
-    .typed-cursor {
-      color: #1e30f3;
-    }
-    .dark .typed-cursor {
-      color: #748bff;
-    }
-  </style>
-  <!-- FOUC prevention: apply dark mode before paint -->
-  <script>
-    (function() {
-      var stored = localStorage.getItem('pbv-theme');
-      if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark');
-      }
-    })();
-  </script>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body class="min-h-screen flex flex-col bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 transition-colors duration-300">
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
 
-  <!-- ═══════════ NAVIGATION ═══════════ -->
-  <nav class="glass sticky top-0 z-50 transition-all duration-300" role="navigation" aria-label="Navegación principal">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16 lg:h-18">
-        <!-- Logo -->
-        <a href="index.html" class="text-2xl lg:text-3xl font-black tracking-tight text-gradient" aria-label="Pedro Barrante Vázquez - Inicio">
-          PBV<span class="text-gray-400 dark:text-gray-500 text-lg font-light">.</span>
+  <!-- ═══════════ NAVEGACIÓN ═══════════ -->
+  <header class="navbar">
+    <nav class="navbar__inner" aria-label="Navegación principal">
+      <a class="navbar__logo" href="index.html" aria-label="Pedro Barrante Vázquez — Inicio">pbv<span class="dot">.</span></a>
+
+      <div class="navbar__links">
+        <a class="navbar__link" href="index.html" aria-current="page">Inicio</a>
+        <a class="navbar__link" href="about.html">Sobre mí</a>
+        <a class="navbar__link" href="lab.html">Lab</a>
+      </div>
+
+      <div class="navbar__actions">
+        <a class="navbar__star" href="https://github.com/LostSleepy" target="_blank" rel="noopener noreferrer" aria-label="GitHub — @LostSleepy">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .288l2.833 8.718H24l-7.416 5.39 2.833 8.718L12 17.724l-7.417 5.39 2.833-8.718L0 9.006h9.167z"/></svg>
+          <span>GitHub</span>
         </a>
-
-        <!-- Desktop links -->
-        <div class="hidden lg:flex items-center gap-1">
-          <a href="index.html" class="px-3 py-2 rounded-xl text-sm font-semibold text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/30 transition-colors" aria-current="page">Inicio</a>
-          <a href="resume.html" class="px-3 py-2 rounded-xl text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">CV</a>
-          <a href="projects.html" class="px-3 py-2 rounded-xl text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Metas</a>
-        </div>
-
-        <div class="hidden lg:flex items-center gap-3">
-          <!-- Dark mode toggle -->
-          <button onclick="toggleDarkMode()" class="p-2 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="Cambiar modo oscuro">
-            <i class="bi bi-moon-stars text-lg dark:hidden"></i>
-            <i class="bi bi-sun text-lg hidden dark:inline"></i>
-          </button>
-          <!-- Language -->
-          <a href="./PortfolioENG/index.html" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold border border-gray-200 dark:border-gray-700 text-gray-500 dark:text-gray-400 hover:border-primary-400 dark:hover:border-primary-500 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
-            <i class="bi bi-translate"></i> English
-          </a>
-        </div>
-
-        <!-- Mobile buttons -->
-        <div class="flex lg:hidden items-center gap-2">
-          <button onclick="toggleDarkMode()" class="p-2 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="Cambiar modo oscuro">
-            <i class="bi bi-moon-stars dark:hidden"></i>
-            <i class="bi bi-sun hidden dark:inline"></i>
-          </button>
-          <button id="mobile-menu-btn" class="p-2 rounded-xl text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú">
-            <i class="bi bi-list text-2xl"></i>
-          </button>
-        </div>
+        <a class="navbar__lang" href="./PortfolioENG/index.html" lang="en">EN</a>
       </div>
+    </nav>
+  </header>
 
-      <!-- Mobile menu -->
-      <div id="mobile-menu" class="hidden flex-col lg:hidden pb-4 gap-1">
-        <a href="index.html" class="px-3 py-2.5 rounded-xl text-sm font-semibold text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/30" aria-current="page">Inicio</a>
-        <a href="resume.html" class="px-3 py-2.5 rounded-xl text-sm font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">CV</a>
-        <a href="projects.html" class="px-3 py-2.5 rounded-xl text-sm font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Metas</a>
-        <hr class="my-1 border-gray-200 dark:border-gray-800" />
-        <a href="./PortfolioENG/index.html" class="inline-flex items-center gap-1.5 px-3 py-2.5 rounded-xl text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
-          <i class="bi bi-translate"></i> English Version
-        </a>
-      </div>
-    </div>
-  </nav>
-
-  <main class="flex-1">
-    <!-- ═══════════ HERO ═══════════ -->
-    <header class="relative overflow-hidden">
-      <!-- Decorative background blobs -->
-      <div class="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-[500px] h-[500px] rounded-full bg-primary-100/40 dark:bg-primary-900/20 blur-3xl pointer-events-none"></div>
-      <div class="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/4 w-[400px] h-[400px] rounded-full bg-accent-100/30 dark:bg-accent-900/20 blur-3xl pointer-events-none"></div>
-
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-28">
-        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <!-- Text column -->
-          <div class="text-center lg:text-left order-2 lg:order-1 reveal reveal-right">
-            <span class="inline-block px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase text-white bg-gradient-to-r from-primary-500 to-accent-500 mb-6 shadow-lg shadow-primary-500/25">
-              Developer
-            </span>
-
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.05] mb-4">
-              <span class="text-gradient">Pedro<br class="sm:hidden" /> Barrante</span>
-            </h1>
-
-            <h2 class="text-lg sm:text-xl lg:text-2xl font-light text-gray-500 dark:text-gray-400 mb-8">
-              Especialista en <span id="typed-text" data-strings='["Java","Desarrollo Móvil","Sistemas Operativos","Software Eficiente"]'></span>
-            </h2>
-
-            <div class="flex flex-wrap gap-3 justify-center lg:justify-start">
-              <a href="resume.html" class="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-bold text-sm text-white bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 shadow-lg shadow-primary-500/25 hover:shadow-xl hover:shadow-primary-500/30 transform hover:-translate-y-0.5 transition-all duration-300">
-                Ver CV
-                <i class="bi bi-arrow-right group-hover:translate-x-1 transition-transform"></i>
-              </a>
-              <a href="projects.html" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-bold text-sm text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-primary-300 dark:hover:border-primary-600 hover:text-primary-600 dark:hover:text-primary-400 shadow-sm hover:shadow-md transform hover:-translate-y-0.5 transition-all duration-300">
-                Metas Profesionales
-              </a>
-            </div>
-          </div>
-
-          <!-- Profile image -->
-          <div class="flex justify-center order-1 lg:order-2 reveal reveal-zoom">
-            <div class="profile-wrapper relative">
-              <div class="absolute inset-0 bg-gradient-to-br from-primary-500 to-accent-500 rounded-[2rem] blur-2xl opacity-20 dark:opacity-30 animate-pulse-glow"></div>
-              <img class="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 object-cover rounded-[2rem] shadow-2xl" src="assets/profile.png" alt="Pedro Barrante Vázquez" />
-            </div>
+  <main id="main">
+    <!-- ═══════════ HERO / PERFIL ═══════════ -->
+    <section class="hero" aria-labelledby="profile-heading">
+      <div class="container">
+        <div class="hero__card reveal">
+          <img class="hero__avatar" src="assets/profile.png" alt="Retrato de Pedro Barrante Vázquez" width="132" height="132" />
+          <div class="hero__info">
+            <h1 id="profile-heading" class="hero__name">Pedro Barrante Vázquez</h1>
+            <p class="hero__handle">@cxctxs_jxck</p>
+            <p class="hero__status-row"><span class="status-dot" aria-hidden="true"></span>Busco mi primera oportunidad profesional</p>
+            <p class="hero__meta-row">
+              <span class="hero__fact">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+                Sevilla, España
+              </span>
+              <span class="sep" aria-hidden="true">·</span>
+              <span class="hero__fact">Técnico Informático | Desarrollo y Soporte Técnico</span>
+            </p>
           </div>
         </div>
+
+        <div class="hero__divider" role="presentation"></div>
+
+        <ul class="hero__bio reveal">
+          <li>Especializado en <span class="bio-highlight">Sistemas Microinformáticos y Redes (SMR)</span> y en <span class="bio-highlight">Desarrollo de Aplicaciones Multiplataforma (DAM)</span>.</li>
+          <li>Experiencia práctica en <span class="bio-highlight">soporte y configuración de sistemas Windows</span>, desarrollo de software y documentación técnica.</li>
+          <li>Busco mi <span class="bio-highlight">primera oportunidad profesional</span> para aplicar mis habilidades de resolución de problemas y seguir creciendo en el sector tecnológico.</li>
+        </ul>
+
+        <div class="hero__socials reveal" data-render="socials" aria-label="Perfiles y contacto"></div>
+
+        <div class="hero__cta reveal">
+          <a class="btn" href="mailto:pedrobarrantevazquez@gmail.com">Enviar email <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
       </div>
-    </header>
+    </section>
 
-    <!-- ═══════════ ABOUT ═══════════ -->
-    <section class="py-16 lg:py-24" aria-labelledby="about-heading">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="reveal">
-          <div class="glass-card rounded-3xl p-8 sm:p-10 lg:p-14 shadow-xl">
-            <div class="text-center max-w-2xl mx-auto">
-              <h2 id="about-heading" class="text-3xl sm:text-4xl lg:text-5xl font-black mb-6">Sobre mí</h2>
-              <p class="text-lg sm:text-xl font-medium text-gray-800 dark:text-gray-100 mb-5">
-                Desarrollador de aplicaciones multiplataforma enfocado en <strong class="text-primary-600 dark:text-primary-400">Java</strong> y arquitecturas robustas.
-              </p>
-              <p class="text-base sm:text-lg text-gray-500 dark:text-gray-400 leading-relaxed mb-8">
-                Con sólidos conocimientos en hardware y sistemas operativos, mi enfoque se centra en crear soluciones de software que no solo funcionen, sino que sean escalables y eficientes. Actualmente buscando nuevos retos donde aportar valor técnico.
-              </p>
+    <!-- ═══════════ HABILIDADES ═══════════ -->
+    <section class="section skill-section" aria-labelledby="skills-heading">
+      <div class="container">
+        <h2 class="card-title reveal" id="skills-heading">
+          <span class="corner tl" aria-hidden="true"></span><span class="corner tr" aria-hidden="true"></span>
+          <span class="corner bl" aria-hidden="true"></span><span class="corner br" aria-hidden="true"></span>
+          Habilidades
+        </h2>
+        <div data-render="skills-marquee" aria-label="Tecnologías y herramientas"></div>
+      </div>
+    </section>
 
-              <!-- Social links -->
-              <div class="flex items-center justify-center gap-5">
-                <a href="https://www.linkedin.com/in/pedrobarrantevazquez/" target="_blank" rel="noopener noreferrer" class="p-3 rounded-2xl text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all hover:scale-110" aria-label="LinkedIn">
-                  <i class="bi bi-linkedin text-2xl"></i>
-                </a>
-                <a href="https://github.com/LostSleepy/" target="_blank" rel="noopener noreferrer" class="p-3 rounded-2xl text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-all hover:scale-110" aria-label="GitHub">
-                  <i class="bi bi-github text-2xl"></i>
-                </a>
-                <a href="https://x.com/cxctxs_jxck" target="_blank" rel="noopener noreferrer" class="p-3 rounded-2xl text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all hover:scale-110" aria-label="Twitter / X">
-                  <i class="bi bi-twitter-x text-2xl"></i>
-                </a>
-              </div>
-            </div>
-          </div>
+    <!-- ═══════════ EXPERIENCIA ═══════════ -->
+    <section class="section experience-section" aria-labelledby="experience-heading">
+      <div class="container">
+        <h2 class="card-title reveal" id="experience-heading">
+          <span class="corner tl" aria-hidden="true"></span><span class="corner tr" aria-hidden="true"></span>
+          <span class="corner bl" aria-hidden="true"></span><span class="corner br" aria-hidden="true"></span>
+          Experiencia
+        </h2>
+        <div class="timeline reveal">
+          <span class="timeline__line" aria-hidden="true"></span>
+          <ul class="timeline__list" data-render="experience"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ PROYECTO DESTACADO ═══════════ -->
+    <section class="section project-section" aria-labelledby="projects-heading">
+      <div class="container">
+        <h2 class="card-title reveal" id="projects-heading">
+          <span class="corner tl" aria-hidden="true"></span><span class="corner tr" aria-hidden="true"></span>
+          <span class="corner bl" aria-hidden="true"></span><span class="corner br" aria-hidden="true"></span>
+          Proyecto destacado
+        </h2>
+        <div class="projects-grid reveal" data-render="projects"></div>
+        <p class="section-more reveal">
+          <span data-render="lab-link"></span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════════ CONTACTO ═══════════ -->
+    <section class="section contact-me" aria-labelledby="contact-heading">
+      <div class="container">
+        <h2 class="card-title reveal" id="contact-heading">
+          <span class="corner tl" aria-hidden="true"></span><span class="corner tr" aria-hidden="true"></span>
+          <span class="corner bl" aria-hidden="true"></span><span class="corner br" aria-hidden="true"></span>
+          Contacto
+        </h2>
+        <div class="contact-card reveal">
+          <h3 class="contact-title">Contacto</h3>
+          <p class="contact-desc">Disponible para oportunidades profesionales. Envíame un email o conéctate por GitHub y LinkedIn.</p>
+          <div class="contact-links" data-render="contact"></div>
         </div>
       </div>
     </section>
   </main>
 
   <!-- ═══════════ FOOTER ═══════════ -->
-  <footer class="mt-auto border-t border-gray-200 dark:border-gray-800 bg-white/50 dark:bg-gray-950/50 backdrop-blur-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-gray-400 dark:text-gray-500">
-        <p>&copy; 2026 Pedro Barrante Vázquez. Made with Passion.</p>
-        <p class="flex items-center gap-1">
-          <span>Hecho con</span>
-          <i class="bi bi-heart-fill text-red-400 animate-pulse"></i>
+  <footer class="footer">
+    <div class="footer-content">
+      <p class="footer-made">Hecho con <span class="heart" aria-hidden="true">♥</span></p>
+      <div class="footer-bottom">
+        <p class="footer-copyright" data-year></p>
+        <p class="footer-clock">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <span data-clock>SEV --:--:--</span>
         </p>
       </div>
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="js/data.js"></script>
   <script src="js/scripts.js"></script>
 </body>
 </html>
