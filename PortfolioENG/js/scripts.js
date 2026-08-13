@@ -80,7 +80,7 @@
   /* ── Sonido de clic ────────────────────────────────────────────────────
    * Reproduce assets/sounds/click.mp3 en CADA clic del usuario, en
    * cualquier parte de la página (no solo en enlaces y botones).
-   * Inspirado en el sonido de clic de manixh.dev:
+   * Implementación propia:
    *  - una única instancia de Audio (sin solapamiento entre clics);
    *  - currentTime = 0 antes de reproducir (clics rápidos reinician el
    *    sonido en vez de encadenarlo);
@@ -473,8 +473,8 @@
   /* ── ClickSpark ────────────────────────────────────────────────────────
    * Efecto de clic: chispas radiales que se disparan desde el punto de
    * clic + un anillo que se expande y se desvanece. Implementación propia
-   * inspirada en el ClickSpark de manixh.dev. Respeta DPR y
-   * prefers-reduced-motion (sin animación en ese caso).
+   * con Canvas. Respeta DPR y prefers-reduced-motion (sin animación en
+   * ese caso).
    */
   function initClickSpark() {
     const canvas = document.createElement('canvas');

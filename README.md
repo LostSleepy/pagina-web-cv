@@ -2,9 +2,9 @@
 
 Currículum web personal de **Pedro Barrante Vázquez** — Técnico Informático (Sevilla, España).
 
-Adaptación deliberada del **sistema de diseño del sitio real [manixh.dev](https://manixh.dev)** (`ig-imanish/manixh`) al contenido e identidad de Pedro Barrante Vázquez: dark-only, minimal, técnico y compacto. HTML + CSS + JavaScript puros, sin frameworks ni build system, desplegable en GitHub Pages tal cual.
+Sitio personal con diseño **dark-only, minimal, técnico y compacto**, pensado para reflejar la identidad de Pedro Barrante Vázquez. HTML + CSS + JavaScript puros, sin frameworks ni build system, desplegable en GitHub Pages tal cual.
 
-> No se copia contenido, identidad ni código de manixh: se reproduce su lenguaje visual (layout, proporciones, componentes, interacciones) con implementación propia.
+> Diseño e implementación propios: dark mode como base, tipografía limpia, layout compacto y microinteracciones (sonido de clic, efecto spark y reveal on scroll) desarrolladas desde cero.
 
 ## Estructura
 
@@ -49,7 +49,7 @@ Cada página incluye: `title`, meta description, keywords, author, robots, canon
 
 ## Sonido de clic
 
-Al hacer clic en elementos interactivos (enlaces, botones, contacto, proyectos…) se reproduce `assets/sounds/click.mp3`, siguiendo el comportamiento del sonido de clic de manixh.dev: instancia de audio única, volumen moderado y reinicio en clics rápidos (sin solapamiento).
+Al hacer clic en elementos interactivos (enlaces, botones, contacto, proyectos…) se reproduce `assets/sounds/click.mp3`: instancia de audio única, volumen moderado y reinicio en clics rápidos (sin solapamiento).
 
 - **Archivos:** `assets/sounds/click.mp3` (ES) y `PortfolioENG/assets/sounds/click.mp3` (EN).
 - **Configuración:** constante `CLICK_SOUND` en `js/scripts.js` → ajusta `volume` (0–1), `src` o `selector` (qué elementos suenan).
